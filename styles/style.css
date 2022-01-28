@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
+
+*{
+
+--Softblue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);  
+--mainBg: hsl(217, 54%, 11%);
+--cardBG: hsl(216, 50%, 16%);
+--line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+
+    
+
+body{
+    background: var(--mainBg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container{
+ width: 300px;
+ position: relative;
+}
+
+.card{
+background: var(--cardBG);
+padding: 1.5rem;
+border-radius: 15px;
+
+
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+   
+}
+
+.view{
+    position: absolute;
+    top: 25px;
+    height: 251px;
+    width: 251px;
+    background-color: hsla(178, 100%, 50%, 0.5);  
+    border-radius: 10px;
+    opacity: 0 ;
+    transition: 0.2s ease-in;
+
+}
+
+.view:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.view img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+.card img:hover{
+    cursor: pointer;
+}
+.text {
+    text-align: left;
+}
+.text h3{
+    color: var(--White);
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 20px;
+    transition: 0.2s ease-in;
+}
+
+.text h3:hover, .credits span:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
+.text p{
+    font-size: 15px;
+    color: var(--Softblue);
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.pricetime{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--line);
+    line-height: 3rem;  
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: var(--Cyan);
+    font-size: 14px;
+    
+}
+.price img, .time img{
+    margin-right: 5px;
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: var(--Softblue);
+}
+
+.credits{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    color: var(--Softblue);
+}
+
+.credits span{
+    color: var(--White);
+    transition: 0.2s ease-in;
+}
+
+.credits img{
+    max-width: 30px;
+    border: 1.5px solid var(--White);
+    margin-right: 15px;
+    border-radius: 50px;
+}
